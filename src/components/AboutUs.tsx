@@ -18,7 +18,7 @@ const AboutUs = () => {
                 </text>
               </svg>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-dark-teal">
+                <div className="text-dark-navy">
                   <svg width="20" height="20" md:width="24" md:height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                   </svg>
@@ -48,7 +48,7 @@ const AboutUs = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-lime text-primary px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
+                className="w-full sm:w-auto bg-navy text-white px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
               >
                 More About <ArrowRight size={18} className="ml-2" />
               </motion.button>
@@ -64,7 +64,7 @@ const AboutUs = () => {
                     />
                   ))}
                 </div>
-                <div className="border-b-2 border-lime pb-1">
+                <div className="border-b-2 border-navy pb-1">
                   <span className="font-bold text-primary text-sm md:text-base">10M+ Impact Across the World.</span>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block bg-lime text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 md:mb-8">
+              <span className="inline-block bg-navy text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 md:mb-8">
                 About Us
               </span>
               <h2 className="text-3xl md:text-6xl font-bold text-primary mb-8 md:mb-12 leading-[1.2]">

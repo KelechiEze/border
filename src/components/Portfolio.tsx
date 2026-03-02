@@ -13,7 +13,7 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-lime/20 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block bg-navy/20 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
               Our Portfolio
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-primary">
@@ -29,7 +29,7 @@ const Portfolio = () => {
             {["All", "Training", "Printing", "Travels"].map((tab, i) => (
               <button 
                 key={i}
-                className={`px-5 md:px-6 py-2 rounded-full font-bold text-xs md:text-sm transition-all ${i === 0 ? 'bg-primary text-white' : 'bg-off-white text-primary hover:bg-lime'}`}
+                className={`px-5 md:px-6 py-2 rounded-full font-bold text-xs md:text-sm transition-all ${i === 0 ? 'bg-primary text-white' : 'bg-off-white text-primary hover:bg-navy hover:text-white'}`}
               >
                 {tab}
               </button>
@@ -61,9 +61,9 @@ const Portfolio = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-                <span className="text-lime font-bold uppercase tracking-widest text-sm mb-2">{project.cat}</span>
+                <span className="text-navy-light font-bold uppercase tracking-widest text-sm mb-2">{project.cat}</span>
                 <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-                <div className="w-12 h-12 bg-lime rounded-full flex items-center justify-center text-primary">
+                <div className="w-12 h-12 bg-navy rounded-full flex items-center justify-center text-white">
                   <ArrowRight size={24} />
                 </div>
               </div>

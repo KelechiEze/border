@@ -12,7 +12,7 @@ const TeamMembers = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-lime text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block bg-navy text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
               Team Member
             </span>
             <h2 className="text-3xl md:text-6xl font-bold text-primary leading-tight">
@@ -22,7 +22,7 @@ const TeamMembers = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full md:w-auto bg-lime text-primary px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
+            className="w-full md:w-auto bg-navy text-white px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
           >
             Get Started <ArrowRight size={18} className="ml-2" />
           </motion.button>

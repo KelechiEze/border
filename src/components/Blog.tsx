@@ -13,7 +13,7 @@ const Blog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-lime/20 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block bg-navy/20 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
               Latest News
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
@@ -43,7 +43,7 @@ const Blog = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-6 left-6 bg-lime text-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
+                <div className="absolute top-6 left-6 bg-navy text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
                   {post.date}
                 </div>
               </div>

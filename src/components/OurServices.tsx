@@ -12,7 +12,7 @@ const OurServices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-lime/20 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block bg-navy/20 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
               Our Services
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
@@ -39,7 +39,7 @@ const OurServices = () => {
               whileHover={{ y: -10 }}
               className="bg-white p-8 md:p-10 rounded-[24px] md:rounded-[32px] shadow-sm border border-charcoal/5 group transition-all hover:shadow-xl"
             >
-              <div className="w-16 h-16 bg-off-white rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-lime transition-colors">
+              <div className="w-16 h-16 bg-off-white rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-navy group-hover:text-white transition-colors">
                 <service.icon size={32} />
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">{service.title}</h3>

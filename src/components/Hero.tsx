@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <section className="px-4 md:px-6 pb-6">
-      <div className="hero-container h-[70vh] md:h-[85vh] bg-dark-teal relative overflow-hidden">
+      <div className="hero-container h-[70vh] md:h-[85vh] bg-dark-navy relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div 
             key={currentHeroImage}
@@ -43,7 +43,7 @@ const Hero = () => {
           <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-red-500 via-yellow-500 to-blue-500" />
         </div>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-l-lg shadow-lg hidden lg:block">
-          <ShoppingCart size={20} className="text-lime" />
+          <ShoppingCart size={20} className="text-navy" />
         </div>
 
         <div className="relative z-30 h-full container mx-auto px-6 md:px-12 flex flex-col justify-center">
@@ -75,7 +75,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-lime text-primary px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold transition-all flex items-center justify-center"
+                className="w-full sm:w-auto bg-navy text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold transition-all flex items-center justify-center"
               >
                 Get Started <ArrowRight size={18} className="ml-2" />
               </motion.button>

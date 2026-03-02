@@ -12,7 +12,7 @@ const Objective = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-lime text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block bg-navy text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
               Objective
             </span>
             <h2 className="text-3xl md:text-6xl font-bold text-primary leading-tight">
@@ -22,7 +22,7 @@ const Objective = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full md:w-auto bg-lime text-primary px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
+            className="w-full md:w-auto bg-navy text-white px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
           >
             Get Started <ArrowRight size={18} className="ml-2" />
           </motion.button>
@@ -47,7 +47,7 @@ const Objective = () => {
                 { label: "Server Hosting", icon: Server }
               ].map((item, i) => (
                 <div key={i} className="text-center group cursor-pointer">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-off-white rounded-full flex items-center justify-center text-primary mb-3 md:mb-4 mx-auto group-hover:bg-lime transition-colors">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-off-white rounded-full flex items-center justify-center text-primary mb-3 md:mb-4 mx-auto group-hover:bg-navy group-hover:text-white transition-colors">
                     <item.icon size={24} md:size={32} strokeWidth={1.5} />
                   </div>
                   <span className="font-bold text-primary text-[10px] md:text-sm">{item.label}</span>
@@ -77,7 +77,7 @@ const Objective = () => {
               {["About", "Mission", "Vision"].map((tab, i) => (
                 <button 
                   key={i}
-                  className={`px-6 md:px-8 py-3 md:py-4 font-bold text-base md:text-lg transition-all whitespace-nowrap ${i === 0 ? 'bg-dark-teal text-white rounded-t-xl' : 'text-charcoal/40 hover:text-primary'}`}
+                  className={`px-6 md:px-8 py-3 md:py-4 font-bold text-base md:text-lg transition-all whitespace-nowrap ${i === 0 ? 'bg-dark-navy text-white rounded-t-xl' : 'text-charcoal/40 hover:text-primary'}`}
                 >
                   {tab}
                 </button>
@@ -92,7 +92,7 @@ const Objective = () => {
                   className="w-full h-40 md:h-48 object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-dark-teal rounded-full flex items-center justify-center text-white shadow-lg">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-dark-navy rounded-full flex items-center justify-center text-white shadow-lg">
                     <Play size={16} md:size={20} fill="currentColor" />
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const Objective = () => {
                 <ul className="space-y-3 md:space-y-4">
                   {["Technology Growth", "Customer Oriented Program", "Dedicated Team member", "Customer Oriented Program"].map((item, i) => (
                     <li key={i} className="flex items-center text-sm md:text-base text-charcoal/60 font-medium">
-                      <span className="w-1.5 h-1.5 bg-lime rounded-full mr-3" />
+                      <span className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
                       {item}
                     </li>
                   ))}
@@ -115,7 +115,7 @@ const Objective = () => {
                 <span className="font-bold text-primary">75%</span>
               </div>
               <div className="w-full h-1.5 bg-off-white rounded-full overflow-hidden">
-                <div className="w-[75%] h-full bg-lime" />
+                <div className="w-[75%] h-full bg-navy" />
               </div>
             </div>
           </motion.div>

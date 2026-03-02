@@ -4,14 +4,14 @@ import { ArrowRight } from 'lucide-react';
 
 const ConsultingBanner = () => {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden bg-dark-teal">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-dark-navy">
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80" 
           alt="Consulting Background" 
           className="w-full h-full object-cover opacity-20 grayscale"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-teal via-dark-teal/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-navy via-dark-navy/80 to-transparent" />
       </div>
 
       {/* Wireframe Globe Decoration */}
@@ -29,7 +29,7 @@ const ConsultingBanner = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block bg-lime text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 md:mb-8">
+          <span className="inline-block bg-navy text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 md:mb-8">
             Consulting
           </span>
           <h2 className="text-3xl md:text-7xl font-bold text-white mb-8 md:mb-12 leading-tight">
@@ -47,7 +47,7 @@ const ConsultingBanner = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto bg-lime text-primary px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center justify-center"
+              className="w-full sm:w-auto bg-white text-primary px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center justify-center"
             >
               Get A Quote <ArrowRight size={18} className="ml-2" />
             </motion.button>

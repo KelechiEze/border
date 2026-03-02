@@ -12,7 +12,7 @@ const BusinessSolutions = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-lime text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block bg-navy text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4">
               Services
             </span>
             <h2 className="text-3xl md:text-6xl font-bold text-primary leading-tight">
@@ -22,7 +22,7 @@ const BusinessSolutions = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full md:w-auto bg-dark-teal text-white px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
+            className="w-full md:w-auto bg-dark-navy text-white px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
           >
             More Services <ArrowRight size={18} className="ml-2" />
           </motion.button>
@@ -46,7 +46,7 @@ const BusinessSolutions = () => {
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
               
               <div className="relative z-10">
-                <div className="w-24 h-24 bg-lime rounded-full flex items-center justify-center text-primary mb-8 mx-auto shadow-inner">
+                <div className="w-24 h-24 bg-navy rounded-full flex items-center justify-center text-white mb-8 mx-auto shadow-inner">
                   <item.icon size={40} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-6">{item.title}</h3>
@@ -55,7 +55,7 @@ const BusinessSolutions = () => {
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-                  className="px-8 py-3 rounded-full border border-charcoal/10 font-bold text-primary hover:bg-lime hover:border-lime transition-all"
+                  className="px-8 py-3 rounded-full border border-charcoal/10 font-bold text-primary hover:bg-navy hover:border-navy hover:text-white transition-all"
                 >
                   Learn More
                 </motion.button>
