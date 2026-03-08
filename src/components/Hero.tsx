@@ -14,8 +14,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="px-4 md:px-6 pb-6">
-      <div className="hero-container h-[70vh] md:h-[85vh] bg-dark-navy relative overflow-hidden">
+    <section className="px-4 md:px-6 pb-12 md:pb-20">
+      <div className="hero-container h-[70vh] md:h-[85vh] bg-dark-navy relative overflow-hidden rounded-[32px] md:rounded-[48px]">
         <AnimatePresence mode="wait">
           <motion.div 
             key={currentHeroImage}
@@ -42,11 +42,8 @@ const Hero = () => {
         <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-r-lg shadow-lg hidden lg:block">
           <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-red-500 via-yellow-500 to-blue-500" />
         </div>
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-l-lg shadow-lg hidden lg:block">
-          <ShoppingCart size={20} className="text-navy" />
-        </div>
 
-        <div className="relative z-30 h-full container mx-auto px-6 md:px-12 flex flex-col justify-center">
+        <div className="relative z-30 h-full container mx-auto px-6 md:px-12 flex flex-col justify-center pb-12 md:pb-24">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -75,20 +72,10 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-navy text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold transition-all flex items-center justify-center"
+                className="w-full sm:w-auto bg-navy text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold transition-all flex items-center justify-center shadow-xl"
               >
                 Get Started <ArrowRight size={18} className="ml-2" />
               </motion.button>
-              
-              <div className="flex items-center space-x-4">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center text-primary shadow-xl"
-                >
-                  <Play size={20} md:size={24} fill="currentColor" />
-                </motion.button>
-                <span className="text-white font-bold text-sm md:text-base">Watch Video</span>
-              </div>
             </div>
           </div>
         </div>

@@ -1,99 +1,100 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
+
+const testimonials = [
+  {
+    name: "Dr. Olumide K.",
+    role: "MEDICAL DIRECTOR, LAGOS GENERAL",
+    text: "The quality of the surgical textiles we received was unparalleled. Their service is efficient, and the delivery was right on schedule. Truly a dependable partner in Nigerian healthcare.",
+    rating: 5,
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+  },
+  {
+    name: "Dr. Olumide K.",
+    role: "MEDICAL DIRECTOR, LAGOS GENERAL",
+    text: "The quality of the surgical textiles we received was unparalleled. Their service is efficient, and the delivery was right on schedule. Truly a dependable partner in Nigerian healthcare.",
+    rating: 5,
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+  },
+  {
+    name: "Dr. Olumide K.",
+    role: "MEDICAL DIRECTOR, LAGOS GENERAL",
+    text: "The quality of the surgical textiles we received was unparalleled. Their service is efficient, and the delivery was right on schedule. Truly a dependable partner in Nigerian healthcare.",
+    rating: 5,
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+  }
+];
 
 const Testimonials = () => {
   return (
-    <section className="py-16 md:py-24 bg-dark-navy overflow-hidden relative">
-      {/* Background Wireframe Decoration */}
-      <div className="absolute right-0 top-0 w-1/2 md:w-1/3 h-full opacity-10 pointer-events-none">
-        <svg viewBox="0 0 100 100" className="w-full h-full text-white">
-          <circle cx="100" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" />
-          <circle cx="100" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" />
-        </svg>
+    <section className="py-20 md:py-32 bg-dark-navy overflow-hidden relative">
+      {/* Background Quote Decoration */}
+      <div className="absolute right-10 top-10 opacity-10 pointer-events-none hidden lg:block">
+        <Quote size={300} className="text-white" strokeWidth={1} />
       </div>
 
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Content */}
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 md:mb-24">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-navy text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 md:mb-8">
+            <span className="inline-block bg-accent text-primary px-6 py-1.5 rounded-md text-sm font-bold uppercase tracking-widest mb-6">
               Testimonial
             </span>
-            
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 md:mb-12 gap-6">
-              <h2 className="text-3xl md:text-6xl font-bold text-white leading-tight">
-                What Our Customers <br className="hidden md:block" /> Say <span className="font-light text-white/60">About Us</span>
-              </h2>
-              <div className="flex gap-4">
-                <button className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-navy hover:text-white transition-all">
-                  <ChevronLeft size={20} md:size={24} />
-                </button>
-                <button className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-navy hover:text-white transition-all">
-                  <ChevronRight size={20} md:size={24} />
-                </button>
-              </div>
-            </div>
-
-            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8 md:mb-12 italic">
-              Ascend the mountain not to plant your flag, but to embrace the challenge, savour the journey, and marvel at the view. Climb to experience the world, not for the world to notice you. This is why they stand out journey, and marvel at the view experience the world, not to notice
+            <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+              WHAT OUR CLIENT'S SAY
+            </h2>
+            <p className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto font-light">
+              Discover why leading medical institutions in Nigeria trust RB Borders for their professional needs.
             </p>
+          </motion.div>
+        </div>
 
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 border-t border-white/10 pt-8 md:pt-12">
-              <div>
-                <h4 className="text-xl md:text-2xl font-bold text-white">Robert J. Hare<span className="text-white/40 font-normal text-base md:text-lg ml-2">/Business Owner</span></h4>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="bg-navy/30 backdrop-blur-sm border border-white/10 p-8 md:p-10 rounded-[24px] flex flex-col h-full hover:border-accent/30 transition-colors group"
+            >
+              <div className="flex gap-1 mb-8">
+                {[...Array(5)].map((_, index) => (
+                  <Star 
+                    key={index} 
+                    size={18} 
+                    className={index < item.rating ? "text-accent" : "text-white/20"} 
+                    fill={index < item.rating ? "currentColor" : "none"}
+                  />
+                ))}
               </div>
-              
-              <div className="bg-white/5 backdrop-blur-md p-4 md:p-6 rounded-2xl border border-white/10 flex items-center gap-4 md:gap-6">
-                <div className="text-navy-light">
-                  <Star size={32} md:size={40} fill="currentColor" />
-                </div>
+
+              <p className="text-white/80 text-lg leading-relaxed mb-10 italic font-light flex-grow">
+                "{item.text}"
+              </p>
+
+              <div className="flex items-center gap-4 pt-6 border-t border-white/5">
+                <img 
+                  src={item.img} 
+                  alt={item.name} 
+                  className="w-14 h-14 rounded-full object-cover border-2 border-white/10"
+                />
                 <div>
-                  <div className="flex gap-1 mb-1">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} size={14} md:size={16} className="text-navy-light" fill="currentColor" />
-                    ))}
-                  </div>
-                  <p className="text-white font-bold text-sm md:text-base">4.3 <span className="text-white/40 font-normal">score, 47 reviews</span></p>
+                  <h4 className="text-accent font-bold text-lg leading-tight">
+                    {item.name}
+                  </h4>
+                  <p className="text-white/40 text-xs font-bold uppercase tracking-wider mt-1">
+                    {item.role}
+                  </p>
                 </div>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative rounded-[32px] md:rounded-[48px] overflow-hidden bg-white/10 p-3 md:p-4">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
-                alt="Testimonial Author" 
-                className="w-full h-[400px] md:h-[600px] object-cover rounded-[24px] md:rounded-[40px]"
-              />
-              
-              {/* Quote Badge */}
-              <div className="absolute top-10 md:top-20 -right-4 md:-right-8 w-16 h-16 md:w-20 md:h-20 bg-navy rounded-full flex items-center justify-center text-white shadow-xl">
-                <Quote size={24} md:size={32} fill="currentColor" />
-              </div>
-
-              {/* Banner Overlay */}
-              <motion.div
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                className="absolute bottom-6 md:bottom-12 -left-6 md:-left-12 bg-navy px-6 md:px-12 py-4 md:py-8 rounded-[24px] md:rounded-[32px] shadow-2xl rotate-[-5deg]"
-              >
-                <h3 className="text-2xl md:text-4xl font-black text-white">"Awesome Work"</h3>
-              </motion.div>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, ArrowRight } from 'lucide-react';
+import { logoUrl } from '../constants';
 
 const Footer = () => {
   return (
@@ -7,11 +8,17 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 md:mb-16">
           <div>
-            <div className="flex items-center space-x-2 mb-6 md:mb-8">
-              <div className="w-8 h-8 bg-dark-navy rounded-sm flex items-center justify-center">
-                <div className="w-4 h-4 bg-navy-light rotate-45" />
+            <div className="flex items-center space-x-3 mb-6 md:mb-8">
+              <img 
+                src={logoUrl} 
+                alt="RB Borders Logo" 
+                className="h-12 w-auto rounded-lg shadow-md border border-white/10"
+                referrerPolicy="no-referrer"
+              />
+              <div className="flex flex-col leading-tight">
+                <span className="text-xl font-bold tracking-tight text-white">RB</span>
+                <span className="text-xl font-bold tracking-tight text-white">Borders</span>
               </div>
-              <span className="text-2xl font-bold tracking-tight">RB Borders</span>
             </div>
             <p className="text-white/60 mb-6 md:mb-8 leading-relaxed text-sm md:text-base">
               Leading the way in professional training, creative printing, and global travel solutions. Connecting borders and expanding opportunities.

@@ -30,9 +30,40 @@ const BusinessSolutions = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 bg-white rounded-[24px] md:rounded-[32px] shadow-sm border border-charcoal/5 overflow-hidden">
           {[
-            { title: "Business Planning", icon: Users, desc: "Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi designer Lorem is Ipsum is" },
-            { title: "Marketing & Branding", icon: Megaphone, desc: "Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi designer Lorem is Ipsum is" },
-            { title: "Sales Consulting", icon: TrendingUp, desc: "Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi designer Lorem is Ipsum is" }
+            { 
+              title: "Training and Development", 
+              icon: Users, 
+              items: [
+                "Creative skills training",
+                "Sublimation and Heat Press Mastery",
+                "Digital Design Training",
+                "Branding & Business Workshops",
+                "Small Business Development Support"
+              ]
+            },
+            { 
+              title: "Printing and Designing", 
+              icon: Megaphone, 
+              items: [
+                "Custom Apparel Printing",
+                "Corporate Branding Materials",
+                "Promotional Merchandise",
+                "Event and Celebration Printing",
+                "Graphic Design Services"
+              ]
+            },
+            { 
+              title: "RB Borders Travels", 
+              icon: TrendingUp, 
+              items: [
+                "Local and International Flight Bookings",
+                "Hotel Reservations Worldwide",
+                "Holiday Packages",
+                "Private and Group Hajj Packages",
+                "Private and Group Umrah Packages",
+                "Travel Advisory and Support"
+              ]
+            }
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -45,14 +76,19 @@ const BusinessSolutions = () => {
               {/* Grid Pattern Background */}
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
               
-              <div className="relative z-10">
+              <div className="relative z-10 w-full">
                 <div className="w-24 h-24 bg-navy rounded-full flex items-center justify-center text-white mb-8 mx-auto shadow-inner">
                   <item.icon size={40} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-6">{item.title}</h3>
-                <p className="text-charcoal/50 mb-10 leading-relaxed max-w-xs mx-auto">
-                  {item.desc}
-                </p>
+                <ul className="text-charcoal/60 mb-10 space-y-2 text-sm text-left max-w-xs mx-auto">
+                  {item.items.map((listItem, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 mr-2 shrink-0" />
+                      {listItem}
+                    </li>
+                  ))}
+                </ul>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   className="px-8 py-3 rounded-full border border-charcoal/10 font-bold text-primary hover:bg-navy hover:border-navy hover:text-white transition-all"

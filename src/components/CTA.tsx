@@ -29,13 +29,6 @@ const CTA = () => {
               >
                 Contact Us Now
               </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-white/10 text-white border border-white/20 px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold backdrop-blur-sm"
-              >
-                View Our Pricing
-              </motion.button>
             </div>
           </div>
         </motion.div>

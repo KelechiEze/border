@@ -5,11 +5,9 @@ import AboutUs from './components/AboutUs';
 import BusinessSolutions from './components/BusinessSolutions';
 import Objective from './components/Objective';
 import CaseStudies from './components/CaseStudies';
-import OurServices from './components/OurServices';
 import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
-import TeamMembers from './components/TeamMembers';
-import FunFacts from './components/FunFacts';
+import Partners from './components/Partners';
 import Blog from './components/Blog';
 import CTA from './components/CTA';
 import ConsultingBanner from './components/ConsultingBanner';
@@ -25,11 +23,9 @@ export default function App() {
       <BusinessSolutions />
       <Objective />
       <CaseStudies />
-      <OurServices />
       <Portfolio />
       <Testimonials />
-      <TeamMembers />
-      <FunFacts />
+      <Partners />
       <Blog />
       <CTA />
       <ConsultingBanner />
