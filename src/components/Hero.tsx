@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ShoppingCart, Play, ArrowRight } from 'lucide-react';
+import { ShoppingCart, Play, ArrowRight, MapPin } from 'lucide-react';
 import { heroImages } from '../constants';
 
 const Hero = () => {
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
+
+  // Location data for each hero image
+  const imageLocations = [
+    { name: "Venice, Italy", font: "font-serif italic" },
+    { name: "Paris, France", font: "font-serif" },
+    { name: "Abidjan", font: "font-mono tracking-wider" },
+    { name: "Austria", font: "font-serif italic tracking-wide" },
+    { name: "Barcelona, Spain", font: "font-serif" }
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,6 +47,23 @@ const Hero = () => {
           </motion.div>
         </AnimatePresence>
 
+        {/* Location Tag - Bottom Right Middle */}
+        <motion.div 
+          key={`location-${currentHeroImage}`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="absolute bottom-12 right-12 z-30 bg-black/30 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 shadow-xl"
+        >
+          <div className="flex items-center gap-2">
+            <MapPin size={20} className="text-white" />
+            <span className={`text-white text-xl md:text-2xl ${imageLocations[currentHeroImage].font}`}>
+              {imageLocations[currentHeroImage].name}
+            </span>
+          </div>
+        </motion.div>
+
         {/* Floating Icons */}
         <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-r-lg shadow-lg hidden lg:block">
           <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-red-500 via-yellow-500 to-blue-500" />
@@ -57,13 +83,13 @@ const Hero = () => {
           </motion.div>
 
           <div className="max-w-4xl">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 leading-[1.2] md:leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8 leading-[1.2] md:leading-[1.1]">
               RAISING STANDARDS. <br className="hidden sm:block" />
               EXPANDING OPPORTUNITIES. <br className="hidden sm:block" />
               CONNECTING BORDERS.
             </h1>
             
-            <p className="text-base md:text-xl text-white/70 max-w-2xl mb-8 md:mb-12 font-medium">
+            <p className="text-sm md:text-base lg:text-xl text-white/70 max-w-2xl mb-8 md:mb-12 font-medium">
               Your trusted partner for Training, Creative Printing, and Travel Solutions.
               Discover cutting-edge solutions before they become mainstream.
             </p>
@@ -72,7 +98,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-navy text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-bold transition-all flex items-center justify-center shadow-xl"
+                className="w-full sm:w-auto bg-navy text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-bold transition-all flex items-center justify-center shadow-xl"
               >
                 Get Started <ArrowRight size={18} className="ml-2" />
               </motion.button>

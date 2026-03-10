@@ -15,7 +15,7 @@ const AboutUs = () => {
               <svg viewBox="0 0 100 100" className="w-full h-full animate-[spin_10s_linear_infinite]">
                 <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
                 <text className="text-[10px] uppercase font-bold tracking-[0.2em] fill-primary">
-                  <textPath xlinkHref="#circlePath">Digital World • Digital World • </textPath>
+                  <textPath xlinkHref="#circlePath">travel • designing • printing • </textPath>
                 </text>
               </svg>
               <div className="absolute inset-0 flex items-center justify-center">
@@ -35,7 +35,7 @@ const AboutUs = () => {
             >
               <img 
                 src={images[0]} 
-                alt="About RB Borders" 
+                alt="RB Borders Travel" 
                 className="w-full h-[350px] md:h-[500px] object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -47,7 +47,7 @@ const AboutUs = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto bg-navy text-white px-8 py-4 rounded-full font-bold flex items-center justify-center shadow-lg"
               >
-                More About <ArrowRight size={18} className="ml-2" />
+                Explore Destinations <ArrowRight size={18} className="ml-2" />
               </motion.button>
             </div>
           </div>
@@ -63,10 +63,18 @@ const AboutUs = () => {
                 About Us
               </span>
               <h2 className="text-3xl md:text-6xl font-bold text-primary mb-8 md:mb-12 leading-[1.2]">
-                We Provide Brilliant Idea <br className="hidden md:block" />
-                To Grow The <span className="font-light italic">Consulting</span> <br className="hidden md:block" />
-                Agency <span className="font-black">Your Sharp Brand</span>
+                Your Gateway To <br className="hidden md:block" />
+                <span className="font-light italic">Local & International</span> <br className="hidden md:block" />
+                <span className="font-black">Travel Experiences</span>
               </h2>
+              
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                We specialize in seamless local and international travel, premium hotel reservations worldwide, 
+                and curated holiday packages designed to create unforgettable memories. Whether you're planning 
+                a business trip, family vacation, or romantic getaway, our expert team ensures every detail is 
+                perfectly arranged.
+              </p>
+              
             </motion.div>
           </div>
         </div>
